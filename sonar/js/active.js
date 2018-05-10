@@ -126,27 +126,6 @@
         });
     }
 
-    // :: Masonary Gallery Active Code MainPage
-    if ($.fn.imagesLoaded) {
-        $('.sonar-portfolio-main').imagesLoaded(function () {
-            // filter items on button click
-            $('.portfolio-menu').on('click', 'button', function () {
-                var filterValue = $(this).attr('data-filter');
-                $grid.isotope({
-                    filter: filterValue
-                });
-            });
-            // init Isotope
-            var $grid = $('.sonar-portfolio-main').isotope({
-                itemSelector: '.single_gallery_item_main',
-                percentPosition: false,
-                masonry: {
-                    columnWidth: '.single_gallery_item_main'
-                }
-            });
-        });
-    }
-
     // :: Magnific Popup Active Code
     if ($.fn.magnificPopup) {
         $('.gallery-img').magnificPopup({
