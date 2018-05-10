@@ -7,6 +7,7 @@
     // :: Preloader Active Code
     $window.on('load', function () {
         $('#preloader').fadeOut('slow', function () {
+            window.onbeforeunload = function() {window.scrollTo(0,0);}
             $(this).remove();
         });
     });
