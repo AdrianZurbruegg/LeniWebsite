@@ -39,8 +39,8 @@
         } else {
             $('.header-area').removeClass('sticky');
             $('.logo-area').removeClass('sticky');
-            document.getElementById("colorSwitchSocial1").style.color = "black";
-            document.getElementById("colorSwitchSocial2").style.color = "black";
+            document.getElementById("colorSwitchSocial1").style.color = "#212529";
+            document.getElementById("colorSwitchSocial2").style.color = "#212529";
             $(document).ready(function(){
                 setTimeout(function(){
                     $('.navbar-toggler-icon').removeClass('sticky');
