@@ -204,7 +204,7 @@ img {
   background-image: url("img/bg-img/AlenaWenger_Icon_POS_bitmap.png");
   background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;}
 
 .bg-transparent {
   background-color: transparent; }
@@ -1083,6 +1083,32 @@ img {
     .sonar-portfolio-menu {
       width: 100%;
       bottom: 20px; } }
+
+/* :: Portfolio Area CSS MainPage */
+.sonar-projects-area-main {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75vh;
+  position: relative;
+  z-index: 1;
+  padding: 100px 35px 50px; }
+.sonar-projects-area-main .single_gallery_item_main {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 50px; }
+.sonar-projects-area-main .single_gallery_item_main .gallery-content-main {
+  padding-top: 30px; }
+.sonar-projects-area-main .single_gallery_item_main .gallery-content-main h4 {
+  margin-bottom: 10px; }
+@media only screen and (max-width: 767px) {
+  .sonar-projects-area-main .single_gallery_item_main .gallery-content-main h4 {
+    font-size: 20px; }
+  .sonar-projects-area-main {
+    width: auto;
+  }}
+.sonar-projects-area-main .single_gallery_item_main .gallery-content-main p {
+  margin-bottom: 0; }
 
 /* :: Blog Area CSS */
 .sonar-blog-area,
