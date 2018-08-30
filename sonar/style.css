@@ -204,7 +204,9 @@ img {
   background-image: url("img/bg-img/AlenaWenger_Icon_POS_bitmap.png");
   background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat;}
+  background-repeat: no-repeat;
+  height: auto;
+}
 
 .bg-transparent {
   background-color: transparent; }
@@ -277,6 +279,41 @@ img {
       height: 50px;
       width: 50px;
       line-height: 46px; } }
+
+#scrollDown {
+  position:absolute;
+  width:100%;
+  bottom:0;
+  text-align:center;
+  background-color: #232323;
+  border-radius: 50%;
+  bottom: 60px;
+  right: 60px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  font-size: 30px;
+  height: 70px;
+  text-align: center;
+  width: 70px;
+  line-height: 66px;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms; }
+#scrollDown:hover {
+  background-color: #192a56; }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #scrollDown {
+    bottom: 30px;
+    right: 30px;
+    height: 50px;
+    width: 50px;
+    line-height: 46px; } }
+@media only screen and (max-width: 767px) {
+  #scrollDown {
+    bottom: 30px;
+    right: 30px;
+    height: 50px;
+    width: 50px;
+    line-height: 46px; } }
 
 .section-padding-100 {
   padding: 100px 0; }
@@ -956,8 +993,16 @@ img {
       height: 400px; } }
 
 /* :: Service Area CSS */
+.single-services-img-resize {
+  height: 3vh;
+}
+.single-services-zentrieren {
+  text-align: center;
+}
 .single-services-area {
   position: relative;
+  margin-right: auto;
+  margin-left: auto;
   z-index: 1;
   margin-bottom: 50px; }
   .single-services-area img {
@@ -1085,16 +1130,30 @@ img {
       bottom: 20px; } }
 
 /* :: Portfolio Area CSS MainPage */
+.single_gallery_item_main_querformat {
+  width: 115vh;
+}
+
+.single_gallery_item_main_hochformat {
+  width: 70vh;
+}
+.sonar-services-area {
+  margin-top: 10%;
+}
+
 .sonar-projects-area-main {
+  background-image: url("img/bg-img/background.jpg");
+  background-attachment: fixed;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 75vh;
   position: relative;
   z-index: 1;
   padding: 100px 35px 50px; }
 .sonar-projects-area-main .single_gallery_item_main {
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
   z-index: 1;
   margin-bottom: 50px; }
 .sonar-projects-area-main .single_gallery_item_main .gallery-content-main {
@@ -1102,13 +1161,24 @@ img {
 .sonar-projects-area-main .single_gallery_item_main .gallery-content-main h4 {
   margin-bottom: 10px; }
 @media only screen and (max-width: 767px) {
-  .sonar-projects-area-main .single_gallery_item_main .gallery-content-main h4 {
+  .sonar-projects-area-main .single_gallery_item_main_hochformat .single_gallery_item_main .gallery-content-main h4 {
     font-size: 20px; }
-  .sonar-projects-area-main {
+  .sonar-projects-area-main, .single_gallery_item_main_hochformat, .single_gallery_item_main_querformat {
     width: auto;
   }}
 .sonar-projects-area-main .single_gallery_item_main .gallery-content-main p {
   margin-bottom: 0; }
+@media only screen and (max-width: 1024px) {
+  .single_gallery_item_main_querformat, .single_gallery_item_main_hochformat {
+    width: auto;
+  }
+}
+@media only screen and (max-width: 930px) {
+  .single_gallery_item_main_querformat {
+    width: auto;
+  }
+}
+
 
 /* :: Blog Area CSS */
 .sonar-blog-area,
