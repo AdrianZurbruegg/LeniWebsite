@@ -25,8 +25,8 @@
     }).trigger("resize");
 
     // :: Sticky Active Code
-    $window.on('scroll', function () {
-        if ($window.scrollTop() > 0) {
+    $(function(){
+        if($('body').is('.contactPage') || $('body').is('.portfolioPage')){
             $('.header-area').addClass('sticky');
             $('.logo-area').addClass('sticky');
             document.getElementById("colorSwitchSocial1").style.color = "white";
@@ -37,17 +37,32 @@
                 }, 150);    // Delay for 5 seconds
             });
         } else {
-            $('.header-area').removeClass('sticky');
-            $('.logo-area').removeClass('sticky');
-            document.getElementById("colorSwitchSocial1").style.color = "#212529";
-            document.getElementById("colorSwitchSocial2").style.color = "#212529";
-            $(document).ready(function(){
-                setTimeout(function(){
-                    $('.navbar-toggler-icon').removeClass('sticky');
-                }, 150);    // Delay for 5 seconds
+            $window.on('scroll', function () {
+                if ($window.scrollTop() > 0) {
+                    $('.header-area').addClass('sticky');
+                    $('.logo-area').addClass('sticky');
+                    document.getElementById("colorSwitchSocial1").style.color = "white";
+                    document.getElementById("colorSwitchSocial2").style.color = "white";
+                    $(document).ready(function(){
+                        setTimeout(function(){
+                            $('.navbar-toggler-icon').addClass('sticky');
+                        }, 150);    // Delay for 5 seconds
+                    });
+                } else {
+                    $('.header-area').removeClass('sticky');
+                    $('.logo-area').removeClass('sticky');
+                    document.getElementById("colorSwitchSocial1").style.color = "#212529";
+                    document.getElementById("colorSwitchSocial2").style.color = "#212529";
+                    $(document).ready(function(){
+                        setTimeout(function(){
+                            $('.navbar-toggler-icon').removeClass('sticky');
+                        }, 150);    // Delay for 5 seconds
+                    });
+                }
             });
         }
     });
+
 
 
     // :: Menu Active Code
